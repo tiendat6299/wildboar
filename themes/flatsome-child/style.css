@@ -1,0 +1,28 @@
+/*
+Theme Name: Flatsome Child
+Description: This is a child theme for Flatsome Theme
+Author: UX Themes
+Template: flatsome
+Version: 3.0
+*/
+
+/*************** ADD CUSTOM CSS HERE.   ***************/
+
+/* Header */
+div.flex-left{
+	margin-right: auto;
+}
+div.flex-grow ul li{
+	width: 25%;
+	right:  0px;
+	margin:  0 auto;
+}
+
+
+
+
+@media only screen and (max-width: 48em) {
+/*************** ADD MOBILE ONLY CSS HERE  ***************/
+
+
+}

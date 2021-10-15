@@ -54,7 +54,7 @@ defined( 'ABSPATH' ) || exit;
 
 		<?php if ( ! WC()->cart->needs_shipping() || wc_ship_to_billing_address_only() ) : ?>
 
-			<h3><?php esc_html_e( 'Additional information', 'woocommerce' ); ?></h3>
+			<!-- <h3>?php esc_html_e( 'Additional information', 'woocommerce' ); ?></h3> -->
 
 		<?php endif; ?>
 
@@ -62,6 +62,10 @@ defined( 'ABSPATH' ) || exit;
 			<?php foreach ( $checkout->get_checkout_fields( 'order' ) as $key => $field ) : ?>
 				<?php woocommerce_form_field( $key, $field, $checkout->get_value( $key ) ); ?>
 			<?php endforeach; ?>
+		</div>
+
+		<div id="order_review_left" class="woocommerce-checkout-review-order">
+			<?php do_action( 'woocommerce_checkout_order_review' ); ?>
 		</div>
 
 	<?php endif; ?>

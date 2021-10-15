@@ -17,12 +17,53 @@ div.flex-grow ul li{
 	right:  0px;
 	margin:  0 auto;
 }
+.searchform{
+	width: 140%;
+}
 
 
 
+
+.shop_table_responsive thead{
+	background-color: #b22025;
+	color: white !important;
+}
+.shop_table_responsive thead tr th,.shop_table_responsive tbody tr td{
+	text-align: center;
+}
+
+
+	/* Cart */
+.cart_totals{
+	max-width: 550px;
+	margin-right: 0px;
+	margin-left: auto;
+}
+.checkout_coupon{
+	display: none;
+}
+
+	/* Checkout */
+form{
+	margin: 0px auto;
+}
+#order_review > #payment, .woocommerce-privacy-policy-text, #order_review_left > .shop_table, #payment > .wc_payment_methods, #order_review > #payment > #place_order{
+	display: none;
+}
+#order_review_left button{
+	background-color: #ffdd00;
+	color: black;
+	margin:  0px auto;
+}
 
 @media only screen and (max-width: 48em) {
 /*************** ADD MOBILE ONLY CSS HERE  ***************/
+	
 
 
+
+	/* Cart */
+.cart_totals{
+	width: 100%;
+}
 }

@@ -37,7 +37,7 @@ $sidebar_classes = implode( ' ', $sidebar_classes );
 
 do_action( 'woocommerce_before_cart' ); ?>
 <div class="woocommerce row <?php echo $row_classes; ?>">
-<div class="col large-7 pb-0 <?php echo $main_classes; ?>">
+<div class="col large-12 pb-0 <?php echo $main_classes; ?>">
 
 <?php wc_print_notices(); ?>
 
@@ -167,10 +167,14 @@ do_action( 'woocommerce_before_cart' ); ?>
 
 			<tr>
 				<td colspan="6" class="actions clear">
+					
+					<div class="wc-proceed-to-checkout">
+						<?php do_action( 'woocommerce_proceed_to_checkout' ); ?>
+					</div>
 
 					<?php do_action( 'woocommerce_cart_actions' ); ?>
 
-					<button type="submit" class="button primary mt-0 pull-left small" name="update_cart" value="<?php esc_attr_e( 'Update cart', 'woocommerce' ); ?>"><?php esc_html_e( 'Update cart', 'woocommerce' ); ?></button>
+				<!-- 	<button type="submit" class="button primary mt-0 pull-left small" name="update_cart" value="?php esc_attr_e( 'Update cart', 'woocommerce' ); ?>">?php esc_html_e( 'Update cart', 'woocommerce' ); ?></button> -->
 
 					<?php wp_nonce_field( 'woocommerce-cart', 'woocommerce-cart-nonce' ); ?>
 				</td>
@@ -186,7 +190,7 @@ do_action( 'woocommerce_before_cart' ); ?>
 
 <?php do_action( 'woocommerce_before_cart_collaterals' ); ?>
 
-<div class="cart-collaterals large-5 col pb-0">
+<div class="cart-collaterals col pb-0">
 	<?php flatsome_sticky_column_open( 'cart_sticky_sidebar' ); ?>
 
 	<div class="cart-sidebar col-inner <?php echo $sidebar_classes; ?>">
